@@ -17,17 +17,18 @@ body {
 a {
     text-decoration: none;
     border: 2px solid #000;
+    background-color: #000;
     border-radius: 20px;
-    color: #000;
-    padding: 5px 10px;
+    color: #fff;
+    padding: 5px 20px;
 }
 
 a:hover {
     text-decoration: none;
     border-radius: 20px;
-    border: 2px solid #fff;
+    border: 2px solid ;
     color: #fff;
-    padding: 5px 10px;
+    padding: 5px 19px;
 }
 
 .container {
@@ -38,7 +39,7 @@ a:hover {
 
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
@@ -46,10 +47,10 @@ a:hover {
     width: 30%;
     display: flex;
     justify-content: space-evenly;
-    padding-right: 20px;
     margin-top: 50px;
     cursor: pointer;
 }
+
 
 /* Corpo do site */
 .sectionOne {
@@ -57,9 +58,12 @@ a:hover {
     height: 80%;
     color: #000;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 20px;
+}
+.sectionOne div {
+    margin-left: 20%;
 }
 h2 {
  width: 280px;
@@ -68,6 +72,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bolder;
     padding-top: 10px;
 }
 
