@@ -5,6 +5,7 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
+    font-family: 'Inter', sans-serif;
 }
 
 .img_background {
@@ -17,18 +18,24 @@ body {
 a {
     text-decoration: none;
     border: 2px solid #000;
-    background-color: #000;
+    background-image: linear-gradient(#222, #444, #222);
     border-radius: 20px;
     color: #fff;
-    padding: 5px 20px;
+    padding: 5px 15px;
+}
+
+.ativo {
+    box-shadow: 5px 5px 5px #000;
+
 }
 
 a:hover {
+    transition: calc(0.2s);
     text-decoration: none;
     border-radius: 20px;
-    border: 2px solid ;
+    border: 2px solid;
     color: #fff;
-    padding: 5px 19px;
+    padding: 5px 30px;
 }
 
 .container {
@@ -62,12 +69,26 @@ a:hover {
     align-items: center;
     border-radius: 20px;
 }
+
 .sectionOne div {
-    margin-left: 20%;
+    margin-left: 10%;
+}
+.card {
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 10px 25px 25px 25px;
+    height: 9%;
+    overflow: hidden;
+}
+.card:hover {
+    transition: calc(0.4s);
+    padding: 50px;
+    height: 50%;
 }
 h2 {
- width: 280px;
+    width: 240px;
 }
+
 footer {
     display: flex;
     justify-content: center;

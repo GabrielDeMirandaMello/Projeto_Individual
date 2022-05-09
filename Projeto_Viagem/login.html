@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
     <title>Meu site</title>
 </head>
 
@@ -16,12 +19,20 @@
             <div class="navegacao">
                 <a href="index.html">Inicio</a>
                 <a href="historia.html">Historias</a>
-                <a href="cadastro.html">Cadastre-se</a>
-                <a href="login.html">Login</a>
+                <a href="cadastro.html">Cadastrar</a>
+                <a class="ativo" href="login.html">Login</a>
             </div>
         </nav>
         <section class="sectionOne">
-
+            <div class="card">
+                <img class="img" src="./img/user.png" alt="">
+                <p>Login</p>
+                <label for="inputEmail">Email:</label>
+                <input id="inputEmail" type="text" placeholder="xxx.xxx@gmail.com" pattern="[a-z]*">
+                <label for="inputSenha">Senha:</label>
+                <input id="inputSenha" type="password" placeholder="********" pattern="[a-z]*">
+                <button onclick="ValidarEntrar()">Entrar</button>
+            </div>
         </section>
         
     </div>
