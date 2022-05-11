@@ -5,7 +5,9 @@ body {
     justify-content: center;
     font-family: 'Inter', sans-serif;
 }
-
+p {
+    padding: 0;
+}
 .img_background {
     position: absolute;
     width: 100vw;
@@ -65,7 +67,7 @@ a:hover {
 .card {
     border: 2px solid #000;
     border-radius: 20px;
-    margin-top: 100px;
+    margin-top: 00px;
     height: 250px;
     width: 20vw;
     padding: 50px;
@@ -78,11 +80,9 @@ a:hover {
     width: 30px;
     margin: 0;
 }
-p {
-    padding: 0;
-}
+
 input {
-    margin: 10px 0;
+    margin: auto;
     padding: 5px;
     align-self: center;
     border-radius: 10px ;
@@ -117,7 +117,7 @@ button:hover {
 
 
 input:invalid {
-    animation: erro 400ms;
+    animation: erro 300ms;
 }
 @keyframes erro {
     25% { transform: translateX(4px);}
