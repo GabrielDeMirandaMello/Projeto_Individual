@@ -2,12 +2,23 @@
 function ValidarEmail() {
     var email = inputEmail.value
 
-    if (email.indexOf('@') == -1) {
+    if (email.indexOf('@') == -1 && email.indexOf('.com') == -1) {
+        inputEmail.style.borderColor = 'red'
+        inputEmail.style.animation = 'erro 300ms'
+        emailInvalido.style.color = 'red'
+        emailInvalido.innerHTML = 'Email sem o "@" e ".com"'
+    } else if (email.indexOf('@') == -1) {
         inputEmail.style.borderColor = 'red'
         inputEmail.style.animation = 'erro 300ms'
         emailInvalido.style.color = 'red'
         emailInvalido.innerHTML = 'Email sem o "@"'
-    }else {
+    } else if (email.indexOf('.com') == -1) {
+        inputEmail.style.borderColor = 'red'
+        inputEmail.style.animation = 'erro 300ms'
+        emailInvalido.style.color = 'red'
+        emailInvalido.innerHTML = 'Email sem o ".com"'
+    }
+    else {
         inputEmail.style.borderColor = 'black'
         emailInvalido.innerHTML = ''
         inputEmail.style.animation = ''
