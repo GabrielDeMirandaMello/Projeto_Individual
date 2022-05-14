@@ -1,3 +1,4 @@
+
 CREATE DATABASE Projeto_Viagens;
 USE Projeto_Viagens;
 
@@ -24,7 +25,3 @@ CREATE TABLE historia (
     datahistoria VARCHAR (30),
     descricao VARCHAR (255)
 );
-
--- select * from usuario join historia on idusuario = fk_idusuario join viagem on idviagem = fk_idviagem;
-
-

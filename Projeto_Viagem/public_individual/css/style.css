@@ -3,14 +3,16 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
     font-family: 'Inter', sans-serif;
 }
 
 .img_background {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     padding: 0;
+    position: absolute;
 }
 
 a {
@@ -19,7 +21,7 @@ a {
     background-image: linear-gradient(#222, #444, #222);
     border-radius: 20px;
     color: #fff;
-    padding: 5px 20px;
+    padding: 5px 15px;
 }
 
 .ativo {
@@ -37,8 +39,8 @@ a:hover {
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: relative;
 }
 
@@ -56,15 +58,35 @@ a:hover {
     cursor: pointer;
 }
 
+
 /* Corpo do site */
 .sectionOne {
     width: 100%;
-    background-color: #BDBDBD;
-    color: white;
-    width: 70vw;
-    margin-top: 51px;
+    height: 80%;
+    color: #000;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     border-radius: 20px;
+}
+
+.sectionOne div {
+    margin-left: 10%;
+}
+.card {
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 15px 25px 25px 25px;
+    height: 8%;
+    overflow: hidden;
+}
+.card:hover {
+    transition: calc(0.4s);
+    padding: 50px;
+    height: 50%;
+}
+h2 {
+    width: 240px;
 }
 
 footer {

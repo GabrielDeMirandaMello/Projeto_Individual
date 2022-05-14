@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="icon" href="./img/plane.png">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <title>Meu site</title>
+</head>
+
+<body>
+    <img class="img_background" src="./img/cadastro.jpg" alt="">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navegacao">
+                <a href="index.html">Inicio</a>
+                <a href="historia.html">Historias</a>
+                <a class="ativo" href="cadastro.html">Cadastrar</a>
+                <a href="login.html">Login</a>
+            </div>
+        </nav>
+        <section class="sectionOne">
+            <div class="card">
+                <ion-icon name="person-add-outline" size="large" ></ion-icon>
+                <p>Cadastre-se</p>
+                <label for="inputEmail">Nome:</label>
+                <div id="emailInvalido" style="font-size: 12px;"></div>
+                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="Gabriel De Miranda Mello">
+                <label for="inputEmail">Telefone:</label>
+                <div id="emailInvalido" style="font-size: 12px;"></div>
+                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="11 976139421">
+                <label for="inputEmail">Email:</label>
+                <div id="emailInvalido" style="font-size: 12px;"></div>
+                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="xxx.xxx@gmail.com">
+                <label for="inputSenha">Senha:</label>
+                <div id="senhaInvalida" style="font-size: 12px;"></div>
+                <input onblur="ValidarSenha()" id="inputSenha" type="password" placeholder="********">
+                <label for="inputSenha">Comfirmar Senha:</label>
+                <div id="senhaInvalida" style="font-size: 12px;"></div>
+                <input onblur="" id="inputSenha" type="password" placeholder="********">
+                <button onblur="ValidarSenha()" id="inputButton" type="password" onclick="" placeholder="********">Entrar</button>
+            </div>
+        </section>
+        <footer>
+            &copy; Todos os direitos reservados!
+        </footer>
+    </div>
+</body>
+</html>
