@@ -28,8 +28,7 @@
         </nav>
         <section class="sectionOne">
             <div class="card">
-                <ion-icon name="person-add-outline" size="large" ></ion-icon>
-                <p>Cadastre-se</p>
+                <span>Cadastre-se <ion-icon name="person-add-outline" size="large"></ion-icon></span>
                 <label for="inputEmail">Nome:</label>
                 <div id="emailInvalido" style="font-size: 12px;"></div>
                 <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="Gabriel De Miranda Mello">
@@ -45,7 +44,11 @@
                 <label for="inputSenha">Comfirmar Senha:</label>
                 <div id="senhaInvalida" style="font-size: 12px;"></div>
                 <input onblur="" id="inputSenha" type="password" placeholder="********">
-                <button onblur="ValidarSenha()" id="inputButton" type="password" onclick="" placeholder="********">Entrar</button>
+                <button onblur="ValidarSenha()" id="inputButton" type="password" onclick="" placeholder="********">
+                    <ion-icon name="send"></ion-icon>
+                    <span>Proximo</span> 
+                </button>
+                
             </div>
         </section>
         <footer>

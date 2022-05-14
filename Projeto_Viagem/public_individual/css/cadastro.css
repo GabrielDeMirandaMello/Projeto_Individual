@@ -77,23 +77,60 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-image: linear-gradient(#2E64FE, #2ECCFA, #2E64FE);
+    position: fixed;
 }
 .btn {
+    padding-top: 20px;
     height: 6vh;
     width: 12vw;
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #inputButton {
-    width: 30%;
+    margin-top: 10px;
+    width: 40%;
     height: 7%;
-    padding-top: 10px;
-    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 50px;
+    border-radius: 5px;
+    background-image: linear-gradient(#2E64FE, #2ECCFA, #2E64FE);
 }
-
+#inputButton:hover {
+    transition: 0.2s;
+    border-radius: 20px;
+}
+#inputButton ion-icon {
+    margin-left: 60%;
+    position: relative;
+}
+#inputButton:hover ion-icon {
+    transition: 1s;
+    padding-left: 60px;
+    position: relative;
+}
+input{
+    border-radius: 10px;
+    border:2px solid black;
+    padding: 5px;
+    width: 50%;
+    margin: 5px;
+}
+#inputButton span {
+    position: fixed;
+    padding-right: 20px;
+}
+span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span ion-icon {
+    padding: 10px;
+}
 footer {
     display: flex;
     display: flex;
@@ -113,3 +150,7 @@ footer {
 ::-webkit-scrollbar-thumb {
     display: none;
 }
+
+/*Inicio Configuração do botao de cadastro */
+
+/*Fim Configuração do botao de cadastro */
