@@ -28,7 +28,7 @@ function ValidarEmail() {
 function ValidarSenha() {
     var senha = inputSenha.value
 
-    if (senha.length < 7) {
+    if (senha.length < 8) {
         inputSenha.style.borderColor = 'red'
         inputSenha.style.animation = 'erro 300ms'
         senhaInvalida.style.color = 'red'
