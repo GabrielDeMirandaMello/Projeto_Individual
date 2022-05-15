@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="icon" href="./img/plane.png">
-    <script src="./js/cadastro.js"></script>
+    <script src="js/validação.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -29,22 +29,33 @@
         <section class="sectionOne" id="etapa0">
             <div class="card">
                 <span>Cadastre-se <ion-icon name="person-add-outline" size="large"></ion-icon></span>
-                <label for="inputEmail">Nome:</label>
-                <div id="emailInvalido" style="font-size: 12px;"></div>
-                <input onblur="" id="inputEmail" type="text" placeholder="Gabriel De Miranda Mello">
-                <label for="inputEmail">Telefone:</label>
-                <div id="emailInvalido" style="font-size: 12px;"></div>
-                <input onblur="" id="inputEmail" type="text" placeholder="11 976139421">
+
+                <label for="inputNome">Nome:</label>
+                <input id="inputNome" type="text" placeholder="Gabriel De Miranda Mello">
+
+                <label for="inputTelefone">Telefone:</label>
+                <div id="telefoneInvalido" style="font-size: 12px;"></div>
+                <input id="inputTelefone" type="text" placeholder="(xx) 9xxxx-xxxx">
+
+
                 <label for="inputEmail">Email:</label>
                 <div id="emailInvalido" style="font-size: 12px;"></div>
-                <input onblur="" id="inputEmail" type="text" placeholder="xxx.xxx@gmail.com">
-                <label for="inputSenha">Senha:</label>
-                <div id="senhaInvalida" style="font-size: 12px;"></div>
-                <input onblur="" id="inputSenha" type="password" placeholder="********">
-                <label for="inputSenha">Confirmar Senha:</label>
-                <div id="senhaInvalida" style="font-size: 12px;"></div>
-                <input onblur="" id="inputSenha" type="password" placeholder="********">
-                <button onclick="proximo()" id="inputButton" type="password" onclick="" placeholder="********">
+                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="xxx.xxx@xxxx.com">
+
+                <label>
+                    Senha:
+                </label>
+                <div id="senhaInvalida" style="font-size: 12px;">
+                </div>
+                <input onblur="ValidarSenha()" id="inputSenha" type="password" placeholder="Senha">
+                <label for="inputSenha">
+                    Confirmar Senha:
+                </label>
+                <div id="ConfirmarSenhaInvalida" style="font-size: 12px;">
+                </div>
+                <input onblur="ValidarConfirmarSenha()" id="inputConfirmarSenha" type="password" placeholder="Confirmar Senha">
+
+                <button onclick="proximo()" id="inputButton" type="password" onclick="" placeholder="Confirmar Senha">
                     <ion-icon name="send"></ion-icon>
                     <span>Proximo</span>
                 </button>
@@ -86,6 +97,11 @@
                     <ion-icon name="send"></ion-icon>
                     <span>Cadastrar</span>
                 </button>
+                <button onclick="VoltarInicio()" id="inputButton" type="password" placeholder="********"
+                    data-swal-toast-template="#my-template">
+                    <ion-icon name="send" class="Voltar"></ion-icon>
+                    <span>Voltar</span>
+                </button>
             </div>
         </section>
         <footer>
@@ -96,3 +112,4 @@
 
 </html>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js/cadastro.js"></script>

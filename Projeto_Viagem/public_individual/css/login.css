@@ -94,6 +94,7 @@ input {
     border-radius: 10px ;
     border: 1px solid #000;
     width: 80%;
+    outline: none;
 }
 button {
     height: 10%;

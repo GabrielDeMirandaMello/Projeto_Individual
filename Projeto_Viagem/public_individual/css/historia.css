@@ -4,7 +4,6 @@ body {
     display: flex;
     justify-content: center;
     background-image: linear-gradient(#A4A4A4, #F2F2F2, #A4A4A4);
-    height: 100vh;
     font-family: 'Inter', sans-serif;
 }
 
@@ -21,7 +20,6 @@ a {
     box-shadow: 5px 5px 5px #000;
 
 }
-
 a:hover {
     transition: calc(0.2s);
     text-decoration: none;
@@ -34,6 +32,7 @@ a:hover {
 .container {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .navbar {

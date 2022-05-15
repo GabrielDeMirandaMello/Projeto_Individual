@@ -37,7 +37,7 @@ a:hover {
 }
 .Viagem {
     border-radius: 10px;
-    border:2px solid black;
+    border:1px solid black;
     padding: 5px;
     width: 53%;
 }
@@ -74,7 +74,7 @@ a:hover {
 
 
 .card {
-    border: 2px solid #000;
+    border: 5px solid #000;
     border-radius: 20px;
     height: 70vh;
     width: 30%;
@@ -112,6 +112,9 @@ a:hover {
     margin-left: 60%;
     position: relative;
 }
+.Voltar {
+    transform: rotate(180deg);
+}
 #inputButton:hover ion-icon {
     transition: 1s;
     padding-left: 60px;
@@ -119,10 +122,11 @@ a:hover {
 }
 input{
     border-radius: 10px;
-    border:2px solid black;
+    border:1px solid black;
     padding: 5px;
     width: 50%;
     margin: 5px;
+    outline: none;
 }
 #inputButton span {
     position: fixed;

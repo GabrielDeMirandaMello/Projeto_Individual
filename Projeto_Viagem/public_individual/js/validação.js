@@ -24,6 +24,7 @@ function ValidarEmail() {
         inputEmail.style.animation = ''
     }
 }
+
 function ValidarSenha() {
     var senha = inputSenha.value
 
@@ -38,3 +39,18 @@ function ValidarSenha() {
         inputSenha.style.animation = ''
     }
 }
+
+function ValidarConfirmarSenha() {
+    var ConfirmarSenha = inputConfirmarSenha.value
+
+        if (ConfirmarSenha.length < 8) {
+            inputConfirmarSenha.style.borderColor = 'red'
+            inputConfirmarSenha.style.animation = 'erro 300ms'
+            ConfirmarSenhaInvalida.style.color = 'red'
+            ConfirmarSenhaInvalida.innerHTML = `Senha Com Menos de 8 Caracteres`
+        } else {
+            inputConfirmarSenha.style.borderColor = 'black'
+            ConfirmarSenhaInvalida.innerHTML = ''
+            inputConfirmarSenha.style.animation = ''
+        }
+    }
