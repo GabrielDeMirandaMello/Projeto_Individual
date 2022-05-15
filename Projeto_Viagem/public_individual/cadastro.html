@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cadastro.css">
     <link rel="icon" href="./img/plane.png">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/cadastro.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
@@ -26,29 +26,66 @@
                 <a href="login.html">Login</a>
             </div>
         </nav>
-        <section class="sectionOne">
+        <section class="sectionOne" id="etapa0">
             <div class="card">
                 <span>Cadastre-se <ion-icon name="person-add-outline" size="large"></ion-icon></span>
                 <label for="inputEmail">Nome:</label>
                 <div id="emailInvalido" style="font-size: 12px;"></div>
-                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="Gabriel De Miranda Mello">
+                <input onblur="" id="inputEmail" type="text" placeholder="Gabriel De Miranda Mello">
                 <label for="inputEmail">Telefone:</label>
                 <div id="emailInvalido" style="font-size: 12px;"></div>
-                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="11 976139421">
+                <input onblur="" id="inputEmail" type="text" placeholder="11 976139421">
                 <label for="inputEmail">Email:</label>
                 <div id="emailInvalido" style="font-size: 12px;"></div>
-                <input onblur="ValidarEmail()" id="inputEmail" type="text" placeholder="xxx.xxx@gmail.com">
+                <input onblur="" id="inputEmail" type="text" placeholder="xxx.xxx@gmail.com">
                 <label for="inputSenha">Senha:</label>
                 <div id="senhaInvalida" style="font-size: 12px;"></div>
-                <input onblur="ValidarSenha()" id="inputSenha" type="password" placeholder="********">
-                <label for="inputSenha">Comfirmar Senha:</label>
+                <input onblur="" id="inputSenha" type="password" placeholder="********">
+                <label for="inputSenha">Confirmar Senha:</label>
                 <div id="senhaInvalida" style="font-size: 12px;"></div>
                 <input onblur="" id="inputSenha" type="password" placeholder="********">
-                <button onblur="ValidarSenha()" id="inputButton" type="password" onclick="" placeholder="********">
+                <button onclick="proximo()" id="inputButton" type="password" onclick="" placeholder="********">
                     <ion-icon name="send"></ion-icon>
-                    <span>Proximo</span> 
+                    <span>Proximo</span>
                 </button>
-                
+            </div>
+        </section>
+        <section class="sectionOne" id="etapa1" style="display: none;">
+            <div class="card">
+                <span>Cadastre-se <ion-icon name="person-add-outline" size="large"></ion-icon></span>
+                <label for="">Deseja Viajar em: </label>
+                <select class="Viagem" id="ComboBox">
+                    <option value="Casal">Casal</option>
+                    <option value="Familia">Familia</option>
+                    <option value="Amigos">Amigos</option>
+                    <option value="Sozinho">Sozinho</option>
+                </select>
+                <label for="">Qual lugar você vai viajar: </label>
+                <select class="Viagem" id="ComboBox">
+                    <option value="Casal">Praia</option>
+                    <option value="Familia">Parque Aquatico</option>
+                    <option value="Amigos">Chácara</option>
+                </select>
+                <label for="">Qual o mês da suas Ferias: </label>
+                <select class="Viagem" id="ComboBox">
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                </select>
+                <button onclick="cadastro()" id="inputButton" type="password" placeholder="********"
+                    data-swal-toast-template="#my-template">
+                    <ion-icon name="send"></ion-icon>
+                    <span>Cadastrar</span>
+                </button>
             </div>
         </section>
         <footer>
@@ -56,4 +93,6 @@
         </footer>
     </div>
 </body>
+
 </html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

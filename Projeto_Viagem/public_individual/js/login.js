@@ -1,6 +1,12 @@
 
 function entrar() {
-
+    Swal.fire({
+        toast:true,
+        position: 'top-end',
+        icon: 'success',
+        title: 'Cadastro efetuado com sucesso !',
+        showConfirmButton: true
+    })
     var emailVar = inputEmail.value;
     var senhaVar = inputSenha.value;
 
