@@ -7,6 +7,7 @@
 body {
     background: #3d4152;
 }
+/* INICIO navegação */
 .navigation {
     position: fixed;
     border-radius: 20px;
@@ -76,7 +77,7 @@ body {
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 .navigation ul li {
     list-style: none;
@@ -143,3 +144,4 @@ background: var(--clr);
 .navigation ul li.active a .text {
     color: var(--clr);
 }
+/* FIM navegação */
