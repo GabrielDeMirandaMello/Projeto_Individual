@@ -1,12 +1,6 @@
 
 function entrar() {
-    Swal.fire({
-        toast:true,
-        position: 'top-end',
-        icon: 'success',
-        title: 'Cadastro efetuado com sucesso !',
-        showConfirmButton: true
-    })
+
     var emailVar = inputEmail.value;
     var senhaVar = inputSenha.value;
 
@@ -14,8 +8,6 @@ function entrar() {
         return false;
     }
 
-    console.log("FORM LOGIN: ", emailVar);
-    console.log("FORM SENHA: ", senhaVar);
 
     fetch("/usuarios/autenticar", {
         method: "POST",
@@ -27,7 +19,6 @@ function entrar() {
             senhaServer: senhaVar
         })
     }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!")
 
         if (resposta.ok) {
             console.log(resposta);
@@ -37,33 +28,30 @@ function entrar() {
                 console.log(JSON.stringify(json));
 
                 sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.NOME_USUARIO = json.nomeusuario;
+                sessionStorage.ID_USUARIO = json.idUsuario;
                 Swal.fire({
+                    toast: true,
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Login Efetuado com Sucesso!',
-                    showConfirmButton: false,
-                    timer: 1500
+                    title: 'Cadastro efetuado com sucesso !',
+                    showConfirmButton: false
                 })
                 setTimeout(function () {
                     window.location = "../dashboard/dashboard.html";
-                }, 1000); // apenas para exibir o loading
+                }, 1500); // apenas para exibir o loading
 
             });
 
         } else {
-
-            console.log("Houve um erro ao tentar realizar o login!");
-
-            resposta.text().then(texto => {
-                console.error(texto);
-                finalizarAguardar(texto);
-            });
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'error',
+                title: 'Cadastro não efetuado, verifique a senha e o email !',
+                showConfirmButton: false
+            })
         }
-
-    }).catch(function (erro) {
-        console.log(erro);
     })
 
     return false;

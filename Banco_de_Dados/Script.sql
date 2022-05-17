@@ -25,6 +25,8 @@ CREATE TABLE historia (
     descricao VARCHAR (255)
 );
 
--- select * from usuario join historia on idusuario = fk_idusuario join viagem on idviagem = fk_idviagem;
+select * from usuario join historia on idusuario = fk_idusuario join viagem on idviagem = fk_idviagem;
 
-
+insert into usuario 
+values(null, 'Gabriel Mello', 11976139421, 'Gabriel.admin@admin.com', 12345678, 'Setembro');
+select * from usuario;
