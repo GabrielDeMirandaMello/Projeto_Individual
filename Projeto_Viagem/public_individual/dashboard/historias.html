@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="stylesheet" href="../css/perfil.css">
-    <link rel="icon" href="./img/plane.png">
+    <link rel="stylesheet" href="../css/dash_historia.css">
+    <link rel="icon" href="../img/plane.png">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
@@ -44,9 +44,9 @@
         
         <ul>
             <li class="list active" style="--clr: #f8fc02;">
-                <a href="contato.html">
+                <a href="historias.html">
                     <span class="icon">
-                        <ion-icon name="call-outline"></ion-icon>
+                        <ion-icon name="images-outline"></ion-icon>
                     </span>
                     <span class="text">Historia</span>
                 </a>
@@ -64,19 +64,28 @@
         </ul>
     </div>
     <section class="container">
-        <div class="card">   
+        <div class="card">
             <div class="div_titulo">
-                <span>Conte-nos a sua Historia</span>
+                <span class="titulo">Conte-nos a sua Historia !</span>
             </div>
             <div class="div_dados">
-                <div>inputs</div>
-                <div>Feedback com texto</div>
+                <div class="form_esquerda">
+                    <label for="">Nome:</label>
+                    <input type="text">
+                    <label for="">Deixe aqui a URL da sua imagem:</label>
+                    <input id="input_imagem" type="url">
+                </div>
+                <div class="form_direita">
+                    <label for="">Deixe aqui seu Feedback da Viagem:</label>
+                    <textarea name="message" id="historia_texto" class="texto_historia" cols="30" rows="10"></textarea>
+                </div>
             </div>
             <div class="div_enviar">
-                <button>Enviar Feedback</button>
+                <button onclick="">Enviar Historia</button>
             </div>
         </div>
     </section>
-<script src="../js/dashboard.js"></script>
 </body>
 </html>
+<script src="../js/dashboard.js"></script>
+<script src="../js/imagens.js"></script>

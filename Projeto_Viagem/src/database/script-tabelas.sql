@@ -5,7 +5,6 @@ USE Projeto_Viagens;
 CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
     nomeusuario VARCHAR (255),
-    telefone VARCHAR (30),
     email VARCHAR (255),
     senha VARCHAR(255),
     mesFerias VARCHAR(100)

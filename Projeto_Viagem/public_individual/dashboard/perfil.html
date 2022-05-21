@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="icon" href="./img/plane.png">
+    <link rel="stylesheet" href="../css/perfil.css">
+    <link rel="icon" href="../img/plane.png">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
@@ -43,9 +44,9 @@
         
         <ul>
             <li class="list" style="--clr: #f8fc02;">
-                <a href="contato.html">
+                <a href="historias.html">
                     <span class="icon">
-                        <ion-icon name="call-outline"></ion-icon>
+                        <ion-icon name="images-outline"></ion-icon>
                     </span>
                     <span class="text">Contato</span>
                 </a>
@@ -62,8 +63,23 @@
             </li>
         </ul>
     </div>
-    <section>
-
+    <section class="container">
+        
+        <div class="card">
+            <div class="div_dados">
+                <div class="titulo">Informações do seu Perfil</div>
+                <span>Nome:</span>
+                <input disabled type="text" id="input_nome" placeholder="Gabriel de Miranda Mello">
+                <span>Email:</span>
+                <input disabled type="text" id="input_email" placeholder="Gabriel.mmello@sptech.school">
+                <span>Ferias:</span>
+                <input disabled type="text" id="input_ferias" placeholder="">
+            </div>
+            <div class="div_icon">
+                <ion-icon name="person" class="icon_perfil"></ion-icon>
+            </div>
+            
+        </div>
     </section>
 <script src="../js/dashboard.js"></script>
 </body>

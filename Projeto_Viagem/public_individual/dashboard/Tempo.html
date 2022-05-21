@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="icon" href="./img/plane.png">
+    <link rel="stylesheet" href="../css/tempo.css">
+    <link rel="icon" href="../img/plane.png">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
@@ -13,13 +15,16 @@
     </style>
     <title>Dashboard</title>
 </head>
+
 <body>
     <div class="navigation">
         <div class="menuToggle"></div>
         <ul>
             <li class="list" style="--clr: #848484;">
                 <a href="#">
-                    <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>
+                    <span class="icon">
+                        <ion-icon name="bar-chart-outline"></ion-icon>
+                    </span>
                     <span class="text">Inicio</span>
                 </a>
             </li>
@@ -27,7 +32,9 @@
         <ul>
             <li class="list" style="--clr: #0080FF;">
                 <a href="perfil.html">
-                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="icon">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </span>
                     <span class="text">Perfil</span>
                 </a>
             </li>
@@ -35,17 +42,19 @@
         <ul>
             <li class="list active" style="--clr: #0fc70f;">
                 <a href="Tempo.html">
-                    <span class="icon"><ion-icon name="thunderstorm-outline"></ion-icon></span>
+                    <span class="icon">
+                        <ion-icon name="thunderstorm-outline"></ion-icon>
+                    </span>
                     <span class="text">Tempo</span>
                 </a>
             </li>
         </ul>
-        
+
         <ul>
             <li class="list" style="--clr: #f8fc02;">
-                <a href="contato.html">
+                <a href="historias.html">
                     <span class="icon">
-                        <ion-icon name="call-outline"></ion-icon>
+                        <ion-icon name="images-outline"></ion-icon>
                     </span>
                     <span class="text">Contato</span>
                 </a>
@@ -62,9 +71,38 @@
             </li>
         </ul>
     </div>
-    <section>
+    <section class="container">
+
+        <div class="card">
+
+            <div class="titulo">
+                TEMPO E TEMPERATURA
+            </div>
+
+            <div class="card_two">
+                <div class="city">Cidade Exemplo, BR</div>
+                <div class="date">Terça, 1 Dezembro 2020</div>
+                <div class="container-temp">
+                    <div id="temp_number">22</div>
+                    <span id="temp_unit">°c</span>
+                </div>
+            </div>
+
+            <div class="">
+                <div class="pesquisar">
+                    <input id="nome_cidade" placeholder="Digite o nome da cidade">
+                    <button class="botaoPesquisar" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <span> Pesquisar</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
 
     </section>
-<script src="../js/dashboard.js"></script>
+    <script src="../js/Tempo.js"></script>
+    <script src="https://kit.fontawesome.com/f0e17cbf2f.js" crossorigin="anonymous"></script>
+    <script src="../js/dashboard.js"></script>
 </body>
+
 </html>
