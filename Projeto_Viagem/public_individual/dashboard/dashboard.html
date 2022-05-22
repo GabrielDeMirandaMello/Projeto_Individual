@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" href="../img/plane.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
@@ -15,7 +17,7 @@
     <title>Dashboard</title>
 </head>
 
-<body>
+<body onload="grafico1(), grafico2()">
     <div class="navigation">
         <div class="menuToggle"></div>
         <ul>
@@ -73,16 +75,42 @@
     <section class="container">
         <div class="top_analitcs">
             <div class="card_analitcs">
+                analitcs 1
             </div>
             <div class="card_analitcs">
+                analitcs 2
             </div>
             <div class="card_analitcs">
+                analitcs 3
             </div>
         </div>
         <div class="card">
+            <div class="card um">
+                <label for="">Verifique os Meses de acordo com a sua Viagem:</label>
+                <select name="" id="" class="tipo_viagem">
+                    <option value="">Selecione...</option>
+                    <option value="">Casal</option>
+                    <option value="">Familia</option>
+                    <option value="">Amigos</option>
+                </select>
+                <canvas id="myChart" class="grafico"></canvas>
+            </div>
+            <div class="card dois">
+                <label for="">Verifique os locais de acordo com a sua Viagem:</label>
+                <select onchange="dados()" id="valor_viagem" class="tipo_viagem">
+                    <option dropzone="" value="">Selecione...</option>
+                    <option value="1">Casal</option>
+                    <option value="2">Familia</option>
+                    <option value="3">Amigos</option>
+                </select>
+                <canvas id="myChart2" class="grafico" ></canvas>
+            </div>
         </div>
+        
     </section>
     <script src="../js/dashboard.js"></script>
+    <script src="../js/graficos.js"></script>
 </body>
 
 </html>
+   
