@@ -34,7 +34,7 @@ function entrar() {
                     toast: true,
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Cadastro efetuado com sucesso !',
+                    title: 'Login efetuado !',
                     showConfirmButton: false
                 })
                 setTimeout(function () {

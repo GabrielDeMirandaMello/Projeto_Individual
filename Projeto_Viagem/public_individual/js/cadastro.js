@@ -19,14 +19,13 @@ function cadastro() {
 function cadastrar() {
     var nome = inputNome.value
     var email = inputEmail.value
-    var telefone = inputTelefone.value
     var senha = inputSenha.value
     var tipoViagem = ComboBox.value
     var localidade = ComboBox1.value
     var mesFerias = ComboBox2.value
 
 
-    if (nome == 0 && email == 0 && telefone == 0 && senha == 0) {
+    if (nome == 0 && email == 0 && senha == 0) {
         Swal.fire({
             toast: true,
             position: 'top-end',
@@ -45,7 +44,6 @@ function cadastrar() {
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nome,
                 emailServer: email,
-                telefoneServer: telefone,
                 senhaServer: senha,
                 tipoViagemServer: tipoViagem,
                 localidadeServer: localidade,

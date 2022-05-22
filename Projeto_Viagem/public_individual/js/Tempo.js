@@ -27,7 +27,14 @@ function searchResults(city) {
         })
         .catch(error => {
             
-            alert(error.message)
+            Swal.fire({
+                toast: true,
+                position: 'top',
+                icon: 'error',
+                title: 'Cidade não informada !',
+                showConfirmButton: false,
+                timer: 2000
+            })
         })
         .then(response => {
             displayResults(response)
