@@ -14,5 +14,6 @@ function activeLink() {
 list.forEach((item) =>
     item.addEventListener('click', activeLink))
 
+var nome = sessionStorage.NOME_USUARIO
 
-
+nomeUsuario.innerHTML = `Olá ${nome}, <br>seja Bem Vindo!`
