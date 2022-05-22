@@ -49,7 +49,6 @@
     box-shadow: 5px 6px rgba(0, 0, 0, 0.6);
     font-size: 100px;
     font-weight: 900;
-    cursor: pointer;
 }
 .pesquisar {
     display: flex;
@@ -89,4 +88,5 @@ button:hover {
     margin-left: 2px;
     border-radius: 10px;
     box-shadow: none;
+    cursor: pointer;
 }

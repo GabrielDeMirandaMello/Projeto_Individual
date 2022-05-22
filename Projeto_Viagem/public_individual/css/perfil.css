@@ -39,6 +39,7 @@ input {
     border-radius: 10px;
     outline: none;
     margin: 10px 0;
+    padding: 10px;
 }
 .icon_perfil {
     width: 50%;
