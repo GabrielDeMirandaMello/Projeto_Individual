@@ -30,6 +30,7 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nomeusuario;
                 sessionStorage.ID_USUARIO = json.idUsuario;
+                sessionStorage.MES_FERIAS = json.mesFerias;
                 Swal.fire({
                     toast: true,
                     position: 'top-end',

@@ -11,9 +11,7 @@ CREATE TABLE usuario (
 );
 CREATE TABLE viagem (
 	idviagem INT PRIMARY KEY AUTO_INCREMENT,
-    cidade VARCHAR (100),
     localidade VARCHAR (30),
-    climaideal VARCHAR (255),
     tipoviagem VARCHAR(255)
 );
 CREATE TABLE historia (
@@ -21,6 +19,6 @@ CREATE TABLE historia (
     FOREIGN KEY (fk_idviagem) REFERENCES viagem(idviagem),
     fk_idusuario INT,
     FOREIGN KEY (fk_idusuario) REFERENCES usuario(idusuario),
-    datahistoria VARCHAR (30),
-    descricao VARCHAR (255)
+    descricao VARCHAR (255),
+    urlImagem VARCHAR(5000)
 );

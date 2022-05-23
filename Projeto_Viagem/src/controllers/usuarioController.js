@@ -102,10 +102,42 @@ function cadastrar(req, res) {
             );
     }
 }
+function cadastroHistoria(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    
+    var url = req.body.urlServer;
+    var descricao = req.body.descricaoServer;
+
+    // Faça as validações dos valores
+    if (url == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (descricao == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else {
+        console.log(res)
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastroHistoria( url, descricao)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
 
 module.exports = {
     entrar,
     cadastrar,
+    cadastroHistoria,
     listar,
     testar
 }
