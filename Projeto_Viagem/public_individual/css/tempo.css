@@ -4,9 +4,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
 }
 .card {
-    width: 80vw;
+    width: 38vw;
     height: 80vh;
     border-radius: 20px;
     background-image: linear-gradient(#A4A4A4, #F2F2F2, #A4A4A4);
@@ -15,6 +16,9 @@
     align-items: center;
     flex-direction: column;
 }
+.card:last-child {
+    margin-left: 2vw;
+}
 .titulo {
     font-size: large;
     font-weight: bolder;
@@ -22,7 +26,7 @@
 .card_two {
     border: 2px solid black;
     border-radius: 10px;
-    width: 40%;
+    width: 60%;
     height: 60%;
     display: flex;
     justify-content: center;
@@ -32,7 +36,7 @@
 
 
 .city{
-    font-size: 32px;
+    font-size: 130%;
 }
 
 .date {
@@ -43,7 +47,7 @@
     display: flex;
     justify-content: center;
     background-image: linear-gradient(#A4A4A4, #F2F2F2, #A4A4A4);
-    width: 70%;
+    width: 82%;
     margin: 20px 0;
     border-radius: 15px;
     box-shadow: 5px 6px rgba(0, 0, 0, 0.6);
@@ -58,13 +62,7 @@
     height: 15vh;
     width: 80vw;
 }
-.weather{
-    font-size: 32px;
-}
 
-.low-high {
-    font-size: 22px;
-}
 input {
     height: 40px;
     width: 20vw;

@@ -17,7 +17,7 @@
     <title>Dashboard</title>
 </head>
 
-<body onload="grafico1(), grafico2()">
+<body onload="grafico1(), grafico2(), dados()">
     <div class="navigation">
         <div class="menuToggle"></div>
         <ul>
@@ -97,11 +97,8 @@
             </div>
             <div class="card dois">
                 <label for="">Verifique os locais de acordo com a sua Viagem:</label>
-                <select onchange="dados()" id="valor_viagem" class="tipo_viagem">
-                    <option dropzone="" value="">Selecione...</option>
+                <select disabled  id="valor_viagem" class="tipo_viagem">
                     <option value="1">Casal</option>
-                    <option value="2">Familia</option>
-                    <option value="3">Amigos</option>
                 </select>
                 <canvas id="myChart2" class="grafico" ></canvas>
             </div>
