@@ -65,13 +65,15 @@ a:hover {
     height: 80%;
     color: #000;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     border-radius: 20px;
 }
 
 .sectionOne div {
     margin-left: 10%;
+    margin-bottom: 5px;
 }
 .card {
     border: 3px solid #000;
@@ -82,9 +84,23 @@ a:hover {
 }
 .card:hover {
     transition: calc(0.4s);
-    padding: 50px;
+    padding: 30px;
     height: 50%;
 }
+.card2 {
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 15px 25px 25px 25px;
+    height: 8%;
+    overflow: hidden;
+}
+
+.card2:hover {
+    transition: calc(0.4s);
+    padding: 30px;
+    height: 30%;
+}
+
 h2 {
     width: 240px;
 }
