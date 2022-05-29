@@ -1,12 +1,5 @@
 var usuarioModel = require("../models/usuarioModel");
 
-var sessoes = [];
-
-function testar(req, res) {
-    console.log("ENTRAMOS NA usuarioController");
-    res.json("ESTAMOS FUNCIONANDO!");
-}
-
 function listar(req, res) {
     usuarioModel.listar()
         .then(function (resultado) {
@@ -104,7 +97,7 @@ function cadastrar(req, res) {
 }
 function cadastroHistoria(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    
+    var nome = req.body.nomeServer;
     var url = req.body.urlServer;
     var descricao = req.body.descricaoServer;
 
@@ -113,10 +106,12 @@ function cadastroHistoria(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (descricao == undefined) {
         res.status(400).send("Sua senha está undefined!");
+    } else if (nome == undefined) {
+        res.status(400).send("Seu nome está undefined!");
     } else {
         console.log(res)
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastroHistoria( url, descricao)
+        usuarioModel.cadastroHistoria(nome, url, descricao)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -138,6 +133,5 @@ module.exports = {
     entrar,
     cadastrar,
     cadastroHistoria,
-    listar,
-    testar
+    listar
 }

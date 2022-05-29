@@ -22,8 +22,12 @@ CREATE TABLE historia (
     fk_idusuario INT,
     FOREIGN KEY (fk_idusuario) REFERENCES usuario(idusuario),
     datahistoria VARCHAR (30),
-    descricao VARCHAR (255)
+    descricao VARCHAR (210),
+    nome varchar(255)
 );
+alter table historia add column nome varchar(255);
+select nome, urlImagem, descricao from historia;
+
 
 select * from usuario join historia on idusuario = fk_idusuario join viagem on idviagem = fk_idviagem;
 

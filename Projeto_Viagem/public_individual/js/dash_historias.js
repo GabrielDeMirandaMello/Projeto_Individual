@@ -29,7 +29,7 @@ function enviarHistoria() {
             showConfirmButton: false,
             timer: 2000
         })
-    } else if ( url.length == 0) {
+    } else if (url.length == 0) {
         input_imagem.style.borderColor = "red"
         input_nome.style.borderColor = "red"
         historia_texto.style.borderColor = "red"
@@ -38,6 +38,18 @@ function enviarHistoria() {
             position: 'top',
             icon: 'error',
             title: 'URL não informada !',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    } else if (descricao.length == 0) {
+        input_imagem.style.borderColor = "red"
+        input_nome.style.borderColor = "red"
+        historia_texto.style.borderColor = "red"
+        Swal.fire({
+            toast: true,
+            position: 'top',
+            icon: 'error',
+            title: 'Descricao não informada !',
             showConfirmButton: false,
             timer: 2000
         })
@@ -55,6 +67,7 @@ function enviarHistoria() {
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
                 urlServer: url,
                 descricaoServer: descricao
             })
@@ -80,4 +93,9 @@ function enviarHistoria() {
     }
 
     
+}
+
+function calcularCaracter() {
+    var valorCaracter = historia_texto.value
+    caracter.innerHTML = valorCaracter.length
 }

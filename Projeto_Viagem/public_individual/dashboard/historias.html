@@ -78,7 +78,8 @@
                 </div>
                 <div class="form_direita">
                     <label for="">Deixe aqui seu Feedback da Viagem:</label>
-                    <textarea name="message" id="historia_texto" class="texto_historia" cols="30" rows="10"></textarea>
+                    <textarea onkeyup="calcularCaracter()" name="message" id="historia_texto" class="texto_historia" cols="30" rows="10" maxlength="210"></textarea>
+                    <span><b id="caracter">0</b>/210</span>
                 </div>
             </div>
             <div class="div_enviar">
