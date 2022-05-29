@@ -17,20 +17,21 @@ CREATE TABLE viagem (
     tipoviagem VARCHAR(255)
 );
 CREATE TABLE historia (
+	id int primary key auto_increment,
 	fk_idviagem INT,
     FOREIGN KEY (fk_idviagem) REFERENCES viagem(idviagem),
     fk_idusuario INT,
     FOREIGN KEY (fk_idusuario) REFERENCES usuario(idusuario),
-    datahistoria VARCHAR (30),
+    urlImagem VARCHAR (5000),
     descricao VARCHAR (210),
     nome varchar(255)
 );
-alter table historia add column nome varchar(255);
-select nome, urlImagem, descricao from historia;
-
-
+DROP TABLE HISTORIA;
+select *from historia;
+DESC HISTORIA;
+update historia set urlImagem = 'https://www.melhoresdestinos.com.br/wp-content/uploads/2019/07/asa-aviao-capa2019-06-820x430.jpg' where nome = 'Gabriel Miranda Mello';
 select * from usuario join historia on idusuario = fk_idusuario join viagem on idviagem = fk_idviagem;
-
 insert into usuario 
 values(null, 'Gabriel Mello', 11976139421, 'Gabriel.admin@admin.com', 12345678, 'Setembro');
 select * from usuario;
+
