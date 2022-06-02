@@ -1,4 +1,13 @@
+function dateBuilder(d) {
+  let days = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+  let months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julio", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
+  let day = days[d.getDay()]; //pegar dia: 0-6
+  let date = d.getDate();
+  let month = months[d.getMonth()];
+  let year = d.getFullYear();
+  return `${month}`;
+}
 
 function dados() {
   var option = valor_viagem.value
@@ -128,20 +137,16 @@ function dados() {
   
 }
 // Grafico dos messes
+
+var total_viagens = sessionStorage.TOTAL_HISTORIA
+
 function grafico1() {
+  
+  let now = new Date();
+  var mes = dateBuilder(now);
+  
   const labels = [
-    'Jan',
-    'Fev',
-    'Mar',
-    'Abr',
-    'Mai',
-    'Jun',
-    'Jul',
-    'Ago',
-    'Set',
-    'Out',
-    'Nov',
-    'Dez'
+    `${mes}`
   ];
 
   const data = {
@@ -150,12 +155,12 @@ function grafico1() {
       label: 'Meu Primeiro Grafico',
       backgroundColor: 'rgb(0,0,205)',
       borderColor: 'rgb(0,0,205)',
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [total_viagens],
     }]
   };
 
   const config = {
-    type: 'line',
+    type: 'bar',
     data: data,
     options: {}
   };
@@ -168,7 +173,7 @@ function grafico1() {
 function grafico2() {
 
 }
-// grafico epecifico das ferias
+// pegar datas do javaScript
 
 
 

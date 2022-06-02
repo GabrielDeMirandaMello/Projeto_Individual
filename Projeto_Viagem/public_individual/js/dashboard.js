@@ -20,26 +20,26 @@ nomeUsuario.innerHTML = `Olá ${nome}, <br>seja Bem Vindo!`
 
 
 function DadosGrafico() {
-    fetch("/dados/listar").then(function (resposta) {
+    fetch("/dados/listarDados").then(function (resposta) {
+        console.log(resposta)
         if (resposta.ok) {
             resposta.json().then(function (resposta) {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
-                // for (let i = 0; i < resposta.length; i++) {
-                //     var publicacao = resposta[i];
-                //     console.log(publicacao)
-                //     inserir_card.innerHTML += `
-                //     <div class="card" style="margin-bottom: 40px;">
-                //         <img class="img_background" src="${publicacao.urlImagem}" alt="">
-                //         <div class="historia">
-                //             <span>${publicacao.descricao}</span><br>
-                //             <span>Relado De: <b>${publicacao.nome}</b></span>
-                //         </div>
-                //     </div>
-                //     `
-                // }
+                console.log('Cai aqui na dashboard' + resposta)
+                var total = resposta[0].total_historia;
+                sessionStorage.TOTAL_HISTORIA = total
+                if (total <= 5) {
+                    qtd_viagens.innerHTML = "Você Tem Poucas Viagens"
+                } else if (total <= 10) {
+                    qtd_viagens.innerHTML = "Você Tem Muitas Viagens"
+                } else {
+                    qtd_viagens.innerHTML = "Você é Rico"
+                }
+            
             });
         } else {
             throw ('Houve um erro na API!');
+
         }
     }).catch(function (resposta) {
         console.error(resposta);
