@@ -214,12 +214,6 @@ body {
     margin: 10px;
 }
 
-#myChart2 {
-    border: 2px solid rgb(0, 0, 205);
-    border-radius: 5px;
-    margin: 10px;
-}
-
 .card .um {
     display: flex;
     flex-direction: column;
@@ -237,4 +231,30 @@ body {
     outline: none;
     border: 1px solid #555;
     padding-left: 20px;
+}
+/* dashboard */
+.calculo_carro{
+    display: flex;
+    align-items: flex-start;
+    height: 24%; 
+    width: 80%;
+    border-radius: 5px;
+    margin: 10px;
+}
+.visual_botao {
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 5px 40px;
+    box-shadow: 5px 5px 10px;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px;
+    box-sizing: border-box;
+    border: 2px solid blue;
 }

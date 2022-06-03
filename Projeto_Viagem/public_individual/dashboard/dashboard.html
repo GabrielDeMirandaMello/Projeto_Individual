@@ -95,11 +95,23 @@
                 <canvas id="myChart" class="grafico"></canvas>
             </div>
             <div class="card dois">
-                <label for="">Verifique os locais de acordo com a sua Viagem:</label>
-                <select disabled  id="valor_viagem" class="tipo_viagem">
-                    <option value="1">Casal</option>
-                </select>
-                <canvas id="myChart2" class="grafico" ></canvas>
+                <h1>Caso você viaje de carro podemos te ajudar:</h1>
+                <h1>&darr;</h1>
+                <div id="myChart2" class="calculo_carro">
+                    <div class="div_km_total">
+                        <h4 class="titulo">Quantos KM tem a sua viagem de carro:</h4> <br>
+                        <input id="km_viagem">
+                    </div> 
+                    
+                    <div class="div_km_litro">
+                        <h4 class="titulo">Quantos litro por KM o carro gasta:</h4> <br>
+                        <input id="km_carro">
+                    </div>
+                </div>
+                <div>
+                    <button class="visual_botao">Calcular Gasto</button><br>
+                </div>
+                <div>Você irá gastar R$<span>0</span> indo de Carro</div>
             </div>
         </div>
         
