@@ -79,7 +79,7 @@ function enviarHistoria() {
                     toast: true,
                     position: 'top',
                     icon: 'success',
-                    title: 'Historia Regitrada !',
+                    title: 'Historia Registrada !',
                     showConfirmButton: false,
                     timer: 2000
                 })

@@ -19,10 +19,10 @@ function entrar() {
             senhaServer: senhaVar
         })
     }).then(function (resposta) {
+        console.log(resposta);
 
         if (resposta.ok) {
-            console.log(resposta);
-
+            
             resposta.json().then(json => {
                 console.log(json);
                 console.log(JSON.stringify(json));
@@ -33,6 +33,7 @@ function entrar() {
                 sessionStorage.MES_FERIAS = json.mesFerias;
                 sessionStorage.TIPO_VIAGEM = json.tipoviagem;
                 sessionStorage.DESTINO = json.localidade;
+
                 Swal.fire({
                     toast: true,
                     position: 'top-end',
@@ -47,6 +48,7 @@ function entrar() {
             });
 
         } else {
+            
             Swal.fire({
                 toast: true,
                 position: 'top-end',

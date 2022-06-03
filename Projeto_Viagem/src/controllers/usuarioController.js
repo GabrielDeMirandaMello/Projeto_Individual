@@ -1,9 +1,9 @@
 var usuarioModel = require("../models/usuarioModel");
 
 function listar(req, res) {
-    var id_usuario = req.body.idServer;
-
-    usuarioModel.listar(id_usuario)
+    var id = req.body.idServer;
+    console.log(req.body.idServer)
+    usuarioModel.listar(id)
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);

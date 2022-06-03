@@ -20,6 +20,7 @@ nomeUsuario.innerHTML = `Olá ${nome}, <br>seja Bem Vindo!`
 
 function listar() {
     var id_usuario = sessionStorage.ID_USUARIO
+    console.log(id_usuario)
     fetch("/usuarios/listar", {
         method: "POST",
         headers: {
