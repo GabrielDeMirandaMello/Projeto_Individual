@@ -31,6 +31,8 @@ function entrar() {
                 sessionStorage.NOME_USUARIO = json.nomeusuario;
                 sessionStorage.ID_USUARIO = json.idUsuario;
                 sessionStorage.MES_FERIAS = json.mesFerias;
+                sessionStorage.TIPO_VIAGEM = json.tipoviagem;
+                sessionStorage.DESTINO = json.localidade;
                 Swal.fire({
                     toast: true,
                     position: 'top-end',

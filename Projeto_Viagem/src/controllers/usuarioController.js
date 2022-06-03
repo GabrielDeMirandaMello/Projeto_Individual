@@ -1,7 +1,9 @@
 var usuarioModel = require("../models/usuarioModel");
 
 function listar(req, res) {
-    usuarioModel.listar()
+    var id_usuario = req.body.idServer;
+
+    usuarioModel.listar(id_usuario)
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
@@ -100,6 +102,7 @@ function cadastroHistoria(req, res) {
     var nome = req.body.nomeServer;
     var url = req.body.urlServer;
     var descricao = req.body.descricaoServer;
+    var id_usuario = req.body.idServer;
 
     // Faça as validações dos valores
     if (url == undefined) {
@@ -108,10 +111,12 @@ function cadastroHistoria(req, res) {
         res.status(400).send("Sua senha está undefined!");
     } else if (nome == undefined) {
         res.status(400).send("Seu nome está undefined!");
+    } else if (id_usuario == undefined) {
+        res.status(400).send("Seu nome está undefined!");
     } else {
         console.log(res)
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastroHistoria(nome, url, descricao)
+        usuarioModel.cadastroHistoria(nome, id_usuario, url, descricao)
             .then(
                 function (resultado) {
                     res.json(resultado);

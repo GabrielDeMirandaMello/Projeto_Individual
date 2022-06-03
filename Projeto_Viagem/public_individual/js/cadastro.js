@@ -21,7 +21,7 @@ function cadastrar() {
     var email = inputEmail.value
     var senha = inputSenha.value
     var tipoViagem = ComboBox.value
-    var localidade = ComboBox1.value
+    var CidadeDesejada = Cidade.value
     var mesFerias = ComboBox2.value
 
 
@@ -46,7 +46,7 @@ function cadastrar() {
                 emailServer: email,
                 senhaServer: senha,
                 tipoViagemServer: tipoViagem,
-                localidadeServer: localidade,
+                localidadeServer: CidadeDesejada,
                 mesFeriasServer: mesFerias,
             })
         }).then(function (resposta) {

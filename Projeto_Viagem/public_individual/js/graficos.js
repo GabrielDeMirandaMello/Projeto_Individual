@@ -152,7 +152,7 @@ function grafico1() {
   const data = {
     labels: labels,
     datasets: [{
-      label: 'Meu Primeiro Grafico',
+      label: 'Historias',
       backgroundColor: 'rgb(0,0,205)',
       borderColor: 'rgb(0,0,205)',
       data: [total_viagens],
@@ -162,7 +162,19 @@ function grafico1() {
   const config = {
     type: 'bar',
     data: data,
-    options: {}
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 10
+          }
+      },
+      plugins: {
+        tooltip: {
+          usePointStyle: true
+        }
+      }
+    }
   };
   const myChart = new Chart(
     document.getElementById('myChart'),

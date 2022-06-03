@@ -1,7 +1,9 @@
 var DadosModel = require("../models/DadosModel");
 
 function listarDados(req, res) {
-    DadosModel.listarDados().then(function (resultado) {
+    var id_usuario = req.body.idServer;
+    
+    DadosModel.listarDados(id_usuario).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

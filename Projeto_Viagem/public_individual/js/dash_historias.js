@@ -4,6 +4,7 @@ function enviarHistoria() {
     var nome = input_nome.value
     var url = input_imagem.value
     var descricao = historia_texto.value
+    var id_usuario = sessionStorage.ID_USUARIO
 
     if (nome.length == 0 && url.length == 0) {
         input_imagem.style.borderColor = "red"
@@ -59,7 +60,7 @@ function enviarHistoria() {
         input_nome.style.borderColor = ""
         historia_texto.style.borderColor = ""
         
-        fetch("/usuarios/cadastrar1", {
+        fetch("/usuarios/cadastrarHistoria", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -67,6 +68,7 @@ function enviarHistoria() {
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
+                idServer: id_usuario,
                 nomeServer: nome,
                 urlServer: url,
                 descricaoServer: descricao
@@ -82,7 +84,7 @@ function enviarHistoria() {
                     timer: 2000
                 })
                 setTimeout(function () {
-                    (window.location = "historias.html")
+                    (window.location = "dashboard.html")
                 }, 2000);
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");

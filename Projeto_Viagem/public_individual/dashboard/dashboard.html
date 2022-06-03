@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" href="../img/plane.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
+    <script src="../js/Aviso.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <style>
@@ -17,7 +17,7 @@
     <title>Dashboard</title>
 </head>
 
-<body onload="grafico1(), grafico2(), dados(), DadosGrafico()">
+<body onload="listar(), listarHistoriasProprias(), grafico1(), grafico2(), dados(), DadosGrafico()">
     <div class="navigation">
         <div class="menuToggle"></div>
         <ul>
@@ -63,6 +63,17 @@
         </ul>
         <ul>
             <li class="list" style="--clr: #f44336;">
+                <a href="historico.html">
+                    <span class="icon">
+                        <ion-icon name="library-outline"></ion-icon>
+                        
+                    </span>
+                    <span class="text">Historico</span>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li class="list" style="--clr: #f44336;">
                 <a href="../login.html">
                     <span class="icon">
                         <ion-icon name="log-out-outline"></ion-icon>
@@ -74,18 +85,13 @@
     </div>
     <section class="container">
         <div class="top_analitcs">
-            <div class="card_analitcs" id="nomeUsuario"></div>
+            <div class="card_bem_vindo" id="nomeUsuario"></div>
             <div class="card_analitcs" id="qtd_viagens"></div>
         </div>
         <div class="card">
             <div class="card um">
-                <label for="">Verifique os Meses de acordo com a sua Viagem:</label>
-                <select name="" id="" class="tipo_viagem">
-                    <option value="">Selecione...</option>
-                    <option value="">Casal</option>
-                    <option value="">Familia</option>
-                    <option value="">Amigos</option>
-                </select>
+                <h1>Este é o seu total de historias conosco:</h1>
+                <h1>&darr;</h1>
                 <canvas id="myChart" class="grafico"></canvas>
             </div>
             <div class="card dois">

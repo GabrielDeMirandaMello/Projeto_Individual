@@ -18,22 +18,51 @@ var nome = sessionStorage.NOME_USUARIO
 
 nomeUsuario.innerHTML = `Olá ${nome}, <br>seja Bem Vindo!`
 
+function listar() {
+    var id_usuario = sessionStorage.ID_USUARIO
+    fetch("/usuarios/listar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idServer: id_usuario
+        })
+    }).then(function (resposta) {
+        console.log(resposta)
+    }).catch(function (erro) {
+        console.log(erro + 'deu merda')
+    })
+}
 
 function DadosGrafico() {
-    fetch("/dados/listarDados").then(function (resposta) {
-        console.log(resposta)
+    var id_usuario = sessionStorage.ID_USUARIO
+    fetch("/dados/listarDados", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idServer: id_usuario
+        })
+    }).then(function (resposta) {
         if (resposta.ok) {
             resposta.json().then(function (resposta) {
-                console.log("Dados recebidos: ", JSON.stringify(resposta));
-                console.log('Cai aqui na dashboard' + resposta)
                 var total = resposta[0].total_historia;
                 sessionStorage.TOTAL_HISTORIA = total
-                if (total <= 5) {
+                if (total < 5) {
                     qtd_viagens.innerHTML = "Você Tem Poucas Viagens"
-                } else if (total <= 10) {
+                    qtd_viagens.style.backgroundImage = "linear-gradient(#ce0303, #F2F2F2, #ce0303)"
+                } else if (total < 10) {
                     qtd_viagens.innerHTML = "Você Tem Muitas Viagens"
+                    qtd_viagens.style.backgroundImage = "linear-gradient(#2dd603, #F2F2F2, #2dd603)"
                 } else {
-                    qtd_viagens.innerHTML = "Você é Rico"
+                    qtd_viagens.innerHTML = "Você é Ricoooo !!!!!!!"
+                    qtd_viagens.style.backgroundImage = "linear-gradient(#dbd801, #F2F2F2, #dbd801)"
                 }
             
             });
