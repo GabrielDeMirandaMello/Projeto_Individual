@@ -7,6 +7,7 @@
 
 body {
     background: #3d4152;
+    overflow-x: hidden;
 }
 
 /* INICIO navegação */
@@ -110,7 +111,7 @@ body {
     position: relative;
     display: block;
     min-width: 55px;
-    height: 55px;
+    height: 50px;
     line-height: 60px;
     transition: 0.5s;
     border-radius: 10px;
@@ -199,6 +200,7 @@ body {
 }
 
 .card {
+    margin: 30px 0;
     width: 80vw;
     height: 72vh;
     border-radius: 20px;
@@ -248,7 +250,13 @@ body {
     box-shadow: 5px 5px 10px;
     cursor: pointer;
 }
-
+.combustiveis {
+    padding: 5px 30px 5px 2px;
+    outline: none;
+    border: 2px solid blue;
+    border-radius: 5px;
+    font-weight: 700;
+}
 input {
     border: none;
     outline: none;
@@ -257,4 +265,16 @@ input {
     box-shadow: 5px 5px 10px;
     box-sizing: border-box;
     border: 2px solid blue;
+}
+::-webkit-scrollbar {
+    background: #3d4152;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(rgb(100, 100, 100), rgb(255, 255, 255), rgb(119, 119, 119));
+    border-radius: 10px;
 }

@@ -100,18 +100,35 @@
                 <div id="myChart2" class="calculo_carro">
                     <div class="div_km_total">
                         <h4 class="titulo">Quantos KM tem a sua viagem de carro:</h4> <br>
-                        <input id="km_viagem">
+                        <input id="input_km_viagem" placeholder="0">
                     </div> 
-                    
                     <div class="div_km_litro">
-                        <h4 class="titulo">Quantos litro por KM o carro gasta:</h4> <br>
-                        <input id="km_carro">
+                        <h4 class="titulo">Quantos KM por litro o carro anda:</h4> <br>
+                        <input id="input_km_carro" placeholder="0">
                     </div>
                 </div>
                 <div>
-                    <button class="visual_botao">Calcular Gasto</button><br>
+                    Selecione o Combustivel:
+                    <select class="combustiveis" id="select_tipo_combustivel">
+                        <option value="1">Gasolina</option>
+                        <option value="2">Alcool</option>
+                        <option value="3">Gás</option>
+                    </select>
                 </div>
-                <div>Você irá gastar R$<span>0</span> indo de Carro</div>
+                <div>
+                    <button class="visual_botao" onclick="CalcularGasto()"><b>Calcular Gasto</b></button>
+                    <button class="visual_botao" onclick="limpar()"><b>Limpar Calculo</b></button><br>
+                </div>
+                <div>Você irá gastar R$<span id="gasto_total">0</span> só de Combustível !</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card um">
+                <h1>Este grafico é um comparativo das suas historias
+                    <br>
+                     em relação as historias do nosso site:</h1>
+                <h1>&darr;</h1>
+                <canvas id="myChart" class="grafico"></canvas>
             </div>
         </div>
         
