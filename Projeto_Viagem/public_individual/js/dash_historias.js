@@ -79,12 +79,12 @@ function enviarHistoria() {
                     toast: true,
                     position: 'top',
                     icon: 'success',
-                    title: 'Historia Registrada !',
+                    title: 'Historia Registrada !       Verifique o grafico na tela de Inicio !',
                     showConfirmButton: false,
-                    timer: 2000
+                    timer: 3000
                 })
                 setTimeout(function () {
-                    (window.location = "dashboard.html")
+                    (window.location = "historias.html")
                 }, 2000);
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");

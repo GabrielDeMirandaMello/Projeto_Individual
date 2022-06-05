@@ -17,7 +17,7 @@
     <title>Dashboard</title>
 </head>
 
-<body onload="listar(), listarHistoriasProprias(), grafico1(), dados(), DadosGrafico()">
+<body onload="validarSessao(), listar(), listarHistoriasProprias(), grafico1(),grafico2() ,dados(), DadosGrafico(), AtualizarGrafico()">
     <div class="navigation">
         <div class="menuToggle"></div>
         <ul>
@@ -57,7 +57,7 @@
                     <span class="icon">
                         <ion-icon name="images-outline"></ion-icon>
                     </span>
-                    <span class="text">Contato</span>
+                    <span class="text">Registrar Historia</span>
                 </a>
             </li>
         </ul>
@@ -68,13 +68,13 @@
                         <ion-icon name="library-outline"></ion-icon>
                         
                     </span>
-                    <span class="text">Historico</span>
+                    <span class="text">Suas Historias</span>
                 </a>
             </li>
         </ul>
         <ul>
             <li class="list" style="--clr: #f44336;">
-                <a href="../login.html">
+                <a onclick="limparSessao()">
                     <span class="icon">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </span>
@@ -97,7 +97,7 @@
             <div class="card dois">
                 <h1>Caso você viaje de carro podemos te ajudar:</h1>
                 <h1>&darr;</h1>
-                <div id="myChart2" class="calculo_carro">
+                <div class="calculo_carro">
                     <div class="div_km_total">
                         <h4 class="titulo">Quantos KM tem a sua viagem de carro:</h4> <br>
                         <input id="input_km_viagem" placeholder="0">
@@ -112,7 +112,7 @@
                     <select class="combustiveis" id="select_tipo_combustivel">
                         <option value="1">Gasolina</option>
                         <option value="2">Alcool</option>
-                        <option value="3">Gás</option>
+                        <option value="3">GNV</option>
                     </select>
                 </div>
                 <div>
@@ -125,13 +125,13 @@
         <div class="card">
             <div class="card um">
                 <h1>Este grafico é um comparativo das suas historias
-                    <br>
-                     em relação as historias do nosso site:</h1>
+                    em relação as historias do nosso site:</h1>
                 <h1>&darr;</h1>
-                <canvas id="myChart" class="grafico"></canvas>
+                <div class="grafico_pizza">
+                    <canvas id="myChart2"></canvas>
+                </div>
             </div>
         </div>
-        
     </section>
     <script src="../js/dashboard.js"></script>
     <script src="../js/graficos.js"></script>
