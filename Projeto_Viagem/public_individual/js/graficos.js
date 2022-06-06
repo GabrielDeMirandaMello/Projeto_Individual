@@ -31,10 +31,10 @@ function DadosGrafico() {
         var total = resposta[0].total_historia;
         sessionStorage.TOTAL_HISTORIA = total
         
-        if (total < 3) {
+        if (total < 2) {
           qtd_viagens.innerHTML = "Você Tem Poucas Viagens"
           qtd_viagens.style.backgroundImage = "linear-gradient(#ce0303, #F2F2F2, #ce0303)"
-        } else if (total < 6) {
+        } else if (total < 4) {
           qtd_viagens.innerHTML = "Você Tem Muitas Viagens"
           qtd_viagens.style.backgroundImage = "linear-gradient(#2dd603, #F2F2F2, #2dd603)"
         } else {
